@@ -1,4 +1,5 @@
 (ns rowland_primes.core)
+
 (defn gcd 
   "Returns the greatest common denominator of two ints"
   [a b]
