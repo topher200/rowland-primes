@@ -23,3 +23,6 @@
      (map
       (fn [n] (- (nth seq1 (+ n 1)) (nth seq1 n)))
       (iterate inc 0)))
+
+(def seq3
+     '(-1))
