@@ -17,3 +17,8 @@
   (let [test-list '(7, 8, 9, 10, 15, 18, 19, 20, 21, 22, 33, 36, 37,
        38, 39, 40, 41, 42, 43, 44, 45, 46, 69, 72, 73)]
     (is (= test-list (take (count test-list) seq1)))))
+
+(deftest seq2-test
+  (let [test-list '(1, 1, 1, 5, 3, 1, 1, 1, 1, 11, 3, 1, 1, 1, 1, 1,
+		       1, 1, 1, 1, 1, 23, 3, 1)]
+    (is (= test-list (take (count test-list) seq2)))))
