@@ -26,4 +26,4 @@
 
 (def seq3
      ;; Elements in seq3 are all of seq2, not including 1's
-     (filter (fn [n] (not= n 1)) seq2))
+     (filter #(not= % 1) seq2))
