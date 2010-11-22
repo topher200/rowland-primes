@@ -13,6 +13,11 @@
   (is (= 7 (algo1 1)))
   (is (= 8 (algo1 2))))
 
+(defn seq-test
+  "Test my sequence against good list data from problem spec"
+  [test-list sequence]
+  (is (= test-list (take (count test-list) sequence))))
+
 (deftest seq1-test
   (let [test-list '(7, 8, 9, 10, 15, 18, 19, 20, 21, 22, 33, 36, 37,
        38, 39, 40, 41, 42, 43, 44, 45, 46, 69, 72, 73)]
