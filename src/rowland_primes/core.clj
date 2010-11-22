@@ -17,3 +17,9 @@
 
 (def seq1
      (map algo1 (iterate inc 1)))
+
+(def seq2
+     ;; Elements in seq2 are the difference between sucessive elements of seq1
+     (map
+      (fn [n] (- (nth seq1 (+ n 1)) (nth seq1 n)))
+      (iterate inc 0)))
