@@ -25,6 +25,7 @@
    seq1))
 
 (deftest seq2-test
-  (let [test-list '(1, 1, 1, 5, 3, 1, 1, 1, 1, 11, 3, 1, 1, 1, 1, 1,
-		       1, 1, 1, 1, 1, 23, 3, 1)]
-    (is (= test-list (take (count test-list) seq2)))))
+  (seq-test
+   '(1, 1, 1, 5, 3, 1, 1, 1, 1, 11, 3, 1, 1, 1, 1, 1,
+	1, 1, 1, 1, 1, 23, 3, 1)
+   seq2))
