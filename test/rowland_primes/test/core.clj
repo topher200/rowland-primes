@@ -8,3 +8,7 @@
   (is (= 12 (gcd 24 12)))
   (is (= 12 (gcd 48 12)))
   (is (= 1 (gcd 3 7))))
+
+(deftest algo1-test
+  (is (= 7 (algo1 1)))
+  (is (= 8 (algo1 2))))
