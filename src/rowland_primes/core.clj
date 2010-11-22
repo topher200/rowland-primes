@@ -11,9 +11,9 @@
 
 (defn algo1
   "Algorithm for the first sequence of the problem"
-  ([n]
-     (if (= n 1) 7
-	 (+ (nth seq1 (- n 2)) (gcd n (nth seq1 (- n 2))))))) ;; n-2 since we're starting at 1
+  ([n] (if (= n 1) 7
+	   ;; Using n-2 since we're starting our sequence at 1
+	   (+ (nth seq1 (- n 2)) (gcd n (nth seq1 (- n 2)))))))
 
 (def seq1
      (map algo1 (iterate inc 1)))
