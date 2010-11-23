@@ -1,14 +1,13 @@
 # rowland_primes
 
-FIXME: write description
+Solves the Rowland Primes problem from Programming Praxis, found at 
+http://programmingpraxis.com/2010/11/12/rowlands-prime-generating-function/
 
 ## Usage
 
-FIXME: write
-
-## Installation
-
-FIXME: write
+Examples on how to generate the sequences can be found in the tester code.
+For example, to generate the first X elements of sequence 1, use take:
+  (take X seq1)
 
 ## License
 Distributed under the ICS License, reproduced below:
