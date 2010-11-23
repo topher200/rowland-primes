@@ -9,12 +9,6 @@
       (if (= a 0) b  ;; if a == 0, return b
 	  (gcd a (mod b a)))))
 
-(defn algo1
-  "Algorithm for the first sequence of the problem"
-  ([n] (if (= n 1) 7
-	   ;; Using n-2 since we're starting our sequence at 1
-	   (+ (nth seq1 (- n 2)) (gcd n (nth seq1 (- n 2)))))))
-
 (def seq1
      (map
       #(if (= % 1) 7
