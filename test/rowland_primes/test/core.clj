@@ -45,3 +45,8 @@
   (is (= 3 (lpf 15)))
   (is (= 5 (lpf 25)))
   (is (= 2 (lpf 100))))
+
+(deftest shortcut-test
+  (seq-test
+   (take 50 seq3)
+   shortcut))
