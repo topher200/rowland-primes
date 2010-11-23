@@ -16,7 +16,11 @@
 	   (+ (nth seq1 (- n 2)) (gcd n (nth seq1 (- n 2)))))))
 
 (def seq1
-     (map algo1 (iterate inc 1)))
+     (map
+      #(if (= % 1) 7
+	    ;; Using n-2 since we're starting our sequence at 1
+	    (+ (nth seq1 (- % 2)) (gcd % (nth seq1 (- % 2)))))
+      (iterate inc 1)))
 
 (def seq2
      ;; Elements in seq2 are the difference between sucessive elements of seq1
