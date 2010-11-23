@@ -40,3 +40,7 @@
   [n]
   (if (= n 1) 1
       (first (factors n))))
+
+(def shortcut
+     ;; Generates the same as seq3, but uses a mathmatical shortcut
+     (lpf (+ (- 6 n) (sum-shortcut (- n 1)))))
