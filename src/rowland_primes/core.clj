@@ -1,6 +1,6 @@
 (ns rowland_primes.core)
 
-(declare seq1)
+(declare shortcut)
 
 (defn gcd 
   "Returns the greatest common denominator of two ints"
@@ -41,6 +41,13 @@
   (if (= n 1) 1
       (first (factors n))))
 
+(defn sum-shortcut
+  "Returns the sum of the first n elements of shortcut"
+  [n]
+  (reduce + (take n shortcut)))
+
 (def shortcut
      ;; Generates the same as seq3, but uses a mathmatical shortcut
-     (lpf (+ (- 6 n) (sum-shortcut (- n 1)))))
+     (map
+      #(lpf (+ (- 6 %) (sum-shortcut (- % 1))))
+      (iterate inc 1)))
