@@ -9,12 +9,6 @@
   (is (= 12 (gcd 48 12)))
   (is (= 1 (gcd 3 7))))
 
-(deftest factors-test
-  (is (= '() (factors 1)))
-  (is (= '(2) (factors 2)))
-  (is (= '(2 2) (factors 4)))
-  (is (= '(2 2 5 5) (factors 100))))
-
 (defn seq-test
   "Test my sequence against good list data from problem spec"
   [test-list sequence]
@@ -37,3 +31,9 @@
    '(5, 3, 11, 3, 23, 3, 47, 3, 5, 3, 101, 3, 7, 11, 3, 13, 233, 3,
 	467, 3, 5, 3, 941, 3)
    seq3))
+
+(deftest factors-test
+  (is (= '() (factors 1)))
+  (is (= '(2) (factors 2)))
+  (is (= '(2 2) (factors 4)))
+  (is (= '(2 2 5 5) (factors 100))))
