@@ -38,4 +38,5 @@
 (defn lpf
   "Returns the lowest prime factor of n"
   [n]
-  (first (factors n)))
+  (if (= n 1) 1
+      (first (factors n))))
