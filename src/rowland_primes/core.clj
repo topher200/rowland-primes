@@ -41,6 +41,8 @@
   (if (= n 1) 1
       (first (factors n))))
 
+(def lpf (memoize lpf))
+
 (defn sum-shortcut
   "Returns the sum of the first n elements of shortcut"
   [n]
