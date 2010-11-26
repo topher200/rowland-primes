@@ -37,3 +37,11 @@
   (is (= '(2) (factors 2)))
   (is (= '(2 2) (factors 4)))
   (is (= '(2 2 5 5) (factors 100))))
+
+(deftest lpf-test
+  (is (= 1 (lpf 1)))
+  (is (= 2 (lpf 2)))
+  (is (= 2 (lpf 4)))
+  (is (= 3 (lpf 15)))
+  (is (= 5 (lpf 25)))
+  (is (= 2 (lpf 100))))
