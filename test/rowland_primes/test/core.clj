@@ -46,6 +46,12 @@
   (is (= 5 (lpf 25)))
   (is (= 2 (lpf 100))))
 
+(deftest sum-shortcut-test
+  (is (= (sum-shortcut 1) 5))
+  (is (= (sum-shortcut 2) 8))
+  (is (= (sum-shortcut 3) 19))
+  (is (= (sum-shortcut 24) 1902)))
+
 (deftest shortcut-test
   (seq-test
    (take 50 seq3)
