@@ -25,3 +25,12 @@
 (def seq3
      ;; Elements in seq3 are all of seq2, not including 1's
      (filter #(not= % 1) seq2))
+
+(defn factors
+  "Returns a list of the prime factors of n"
+  [n]
+  (if (= n 1) '() ;; (factors 1) == '()
+      (loop [i 2]
+	(if (= (mod n i) 0)
+	  (cons i (factors (/ n i))) ;; found a factor- look for more
+	  (recur (inc i))))))
