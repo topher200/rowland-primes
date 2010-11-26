@@ -34,3 +34,8 @@
 	(if (= (mod n i) 0)
 	  (cons i (factors (/ n i))) ;; found a factor- look for more
 	  (recur (inc i))))))
+
+(defn lpf
+  "Returns the lowest prime factor of n"
+  [n]
+  (first (factors n)))
