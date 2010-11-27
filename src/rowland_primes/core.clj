@@ -1,6 +1,7 @@
 (ns rowland_primes.core)
 
 (declare shortcut)
+(declare factors-memoized)
 
 (defn gcd 
   "Returns the greatest common denominator of two ints"
@@ -32,16 +33,16 @@
   (if (= n 1) '() ;; (factors 1) == '()
       (loop [i 2]
 	(if (= (mod n i) 0)
-	  (cons i (factors (/ n i))) ;; found a factor- look for more
+	  (cons i (factors-memoized (/ n i))) ;; found a factor- look for more
 	  (recur (inc i))))))
 
-(def factors (memoize factors))
+(def factors-memoized (memoize factors))
 
 (defn lpf
   "Returns the lowest prime factor of n"
   [n]
   (if (= n 1) 1
-      (first (factors n))))
+      (first (factors-memoized n))))
 
 (def lpf (memoize lpf))
 
