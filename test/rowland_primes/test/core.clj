@@ -36,6 +36,8 @@
   (is (= '() (factors 1)))
   (is (= '(2) (factors 2)))
   (is (= '(2 2) (factors 4)))
+  (is (= '(2 2) (factors 4)))
+  (is (= '(5 5 5) (factors 125)))
   (is (= '(2 2 5 5) (factors 100))))
 
 (deftest lpf-test
@@ -54,5 +56,5 @@
 
 (deftest shortcut-test
   (seq-test
-   (take 50 seq3)
+   (take 20 seq3)
    shortcut))
