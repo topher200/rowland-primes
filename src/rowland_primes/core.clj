@@ -35,6 +35,8 @@
 	  (cons i (factors (/ n i))) ;; found a factor- look for more
 	  (recur (inc i))))))
 
+(def factors (memoize factors))
+
 (defn lpf
   "Returns the lowest prime factor of n"
   [n]
@@ -47,6 +49,8 @@
   "Returns the sum of the first n elements of shortcut"
   [n]
   (reduce + (take n shortcut)))
+
+(def sum-shortcut (memoize sum-shortcut))
 
 (def shortcut
      ;; Generates the same as seq3, but uses a mathmatical shortcut
